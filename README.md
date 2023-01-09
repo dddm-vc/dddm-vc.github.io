@@ -1,1 +1,1 @@
-# dddm-vc.github.io
+# dddm-vc demo page
