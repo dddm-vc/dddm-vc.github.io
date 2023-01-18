@@ -20,7 +20,8 @@ DDDM-VC
           <link rel="stylesheet" href="css/body.css">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css" integrity="sha512-3q8fi8M0VS+X/3n64Ndpp6Bit7oXSiyCnzmlx6IDBLGlY5euFySyJ46RUlqIVs0DPCGOypqP8IRk/EyPvU28mQ==" crossorigin="anonymous" />
       </head>
-   
+      #263959
+
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
             <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">DDDM-VC</a>
@@ -65,7 +66,7 @@ DDDM-VC
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-12 ml-auto">
-                      <p class="pre-wrap lead">Recently, diffusion-based generative models have shown their powerful generative performance. However, since there are many attributes in the data distribution and some limitations of sharing model parameters in the entire generation process, it is still challenging to control specific styles for each attribute. To address the aforementioned problem, this paper presents decoupled denoising diffusion models (DDDMs) with disentangled representations, which can control the style for each attribute in generative models. We apply DDDMs to voice conversion (VC) tasks where there still remain challenging problems in disentangling and controlling each attribute of speech (e.g., linguistic information, intonation, and timbre). First, we utilize self-supervised representation to disentangle speech. Then, DDDMs are utilized to resynthesize speech from disentangled representations to denoise with respect to each attribute. Moreover, for robust voice style transfer, we also propose a prior mixup, which utilizes the converted representation by the mixed style as a prior distribution for the diffusion models. The experimental results demonstrate that our method outperforms publicly available VC models. Furthermore, we show that our method has robust generative performance regardless of model size (Specifically 5.87x smaller than state-of-the art VC system.). </p>
+                      <p class="pre-wrap lead">Diffusion-based generative models have exhibited powerful generative performance in recent years. However, as many attributes exist in the data distribution and owing to several limitations of sharing the model parameters across all levels of the generation process, it remains challenging to control specific styles for each attribute. To address the above problem, this paper presents decoupled denoising diffusion models (DDDMs) with disentangled representations, which can control the style for each attribute in generative models. We apply DDDMs to voice conversion (VC) tasks to address the challenges of disentangling and controlling each speech attribute (e.g., linguistic information, intonation, and timbre). First, we use a self-supervised representation to disentangle the speech representation. Subsequently, the DDDMs are applied to resynthesize the speech from the disentangled representations for denoising with respect to each attribute. Moreover, we also propose the prior mixup for robust voice style transfer, which uses the converted representation of the mixed style as a prior distribution for the diffusion models. The experimental results reveal that our method outperforms publicly available VC models. Furthermore, we show that our method provides robust generative performance regardless of the model size. </p>
                         <p class="pre-wrap lead">&nbsp;</p>
                         <p class="pre-wrap lead">We compare DDDM-VC with several Voice Conversion models as:</p>
                         <p class="pre-wrap lead">  1. AutoVC [K. Qian et al., 2019] : <a href="https://auspicious3000.github.io/autovc-demo/">[Official Demo page]</a></p>
@@ -89,7 +90,9 @@ DDDM-VC
             font-size: 13pt;
           }
         </style>
-
+        
+       
+        <!-- <section class="page-section text-white mb-0" id="oneshot" style="background-color:#6d819c" >	 -->
         <section class="page-section bg-info text-white mb-0" id="oneshot">	
             <div class="container">
               <div class="text-center">
@@ -536,7 +539,7 @@ DDDM-VC
                           </td>
                           <td><p><strong>DDDM-VC <br> (Small, 30 iter.) </strong></p>
                             <audio id="player" controls><source src="audio/zeroshot/sample2/dddmvc_s_30_p236_004_to_p226_007.wav" type="audio/wav"></audio>
-                          </td>
+                          </td><td></td>
                         </tr>
                         <tr>
                           <td><p><strong>DDDM-VC <br> (Base, 6 iter.) </strong></p>
