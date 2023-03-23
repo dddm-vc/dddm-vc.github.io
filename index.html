@@ -34,6 +34,7 @@ DDDM-VC
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#zeroshot">Zero-shot VC</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#zero_crosslingual">Zero-shot Cross-lingual VC</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#ablation">Ablation Study</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#control">Additional Experiments for Rebuttal</a></li>
                     </ul>
                 </div>
             </div>
@@ -629,8 +630,8 @@ DDDM-VC
                     <td rowspan="1" style="vertical-align: top;"><p> Finnish </p>
                       <audio id="player" controls ><source src="audio/crosslingual/Finnish/salmelan_heinatalkoot_1055.wav" type="audio/wav"></audio>
                     </td>
-                    <td rowspan="1" style="vertical-align: top;"><p> Japanese </p>
-                      <audio id="player" controls><source src="audio/crosslingual/Finnish/meian_6494.wav" type="audio/wav"></audio>
+                    <td rowspan="1" style="vertical-align: top;"><p> Dutch </p>
+                      <audio id="player" controls><source src="audio/crosslingual/Finnish/20000_mijlen_6494.wav" type="audio/wav"></audio>
                     </td>
                     <td><p><strong>DDDM-VC</strong></p>
                       <audio id="player" controls><source src="audio/crosslingual/Finnish/salmelan_heinatalkoot_1055_to_20000_mijlen_6494.wav" type="audio/wav"></audio>
@@ -758,7 +759,7 @@ DDDM-VC
                     <td rowspan="1" style="vertical-align: top;"><p> German </p>
                       <audio id="player" controls ><source src="audio/crosslingual/German/serapionsbruederauswahl_1717.wav" type="audio/wav"></audio>
                     </td>
-                    <td rowspan="1" style="vertical-align: top;"><p> Japanese </p>
+                    <td rowspan="1" style="vertical-align: top;"><p> Dutch </p>
                       <audio id="player" controls><source src="audio/crosslingual/German/20000_mijlen_6493.wav" type="audio/wav"></audio>
                     </td>
                     <td><p><strong>DDDM-VC</strong></p>
@@ -899,6 +900,110 @@ DDDM-VC
             </div>
         </section>
 
+        <section class="page-section bg-primary text-white mb-0" id="control">
+          <div class="container">
+            <div class="text-center">
+              <h2 class="page-section-heading d-inline-block">Additional Experiments for Rebuttal</h2>
+            </div>
+          
+            <div class="divider-custom divider-light">
+              </div>
+            <div class="row">
+              <div class="col-lg-12 ml-auto">
+                <table class="table table-responsive align-content-center" style="background-color: rgba(255, 255, 255, 0.993); border-radius: 20px">
+                  <tr>
+                    <th style="width: 20%"> Source Speaker </th>
+                    <th style="width: 20%"> Target Speaker </th>
+                    <th style="width: 20%"> Filter </th>
+                    <th style="width: 20%"> Source </th>
+                    <th style="width: 20%; color: rgba(5, 10, 54, 0.795)"> Method </th>
+
+                  </tr> 
+                    
+                <tbody>
+                  <tr>
+                    <td rowspan="1" style="vertical-align: top;"><p> p232 (VCTK) </p>
+                      <audio id="player" controls ><source src="audio/control/p232_003.wav" type="audio/wav"></audio>
+                    </td>
+                    <td rowspan="1" style="vertical-align: top;"><p> p232 (VCTK) </p>
+                      <audio id="player" controls><source src="audio/control/p232_003.wav" type="audio/wav"></audio>
+                    </td>
+                    <td><p><center>Source spk emb</center></p></td>
+                    <td><p><center>Source spk emb</center></p></td>
+                    <td><p><strong> Resynthesis </strong></p>  
+                      <audio id="player" controls><source src="audio/control/Resyn.wav" type="audio/wav"></audio>
+                    </td><td></td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3" style="vertical-align: top;"><p> p232 (VCTK) </p>
+                      <audio id="player" controls ><source src="audio/control/p232_003.wav" type="audio/wav"></audio>
+                    </td>
+                    <td rowspan="3" style="vertical-align: top;"><p> p237 (VCTK) </p>
+                      <audio id="player" controls><source src="audio/control/p237_020.wav" type="audio/wav"></audio>
+                    </td>
+                    <td><p><center>Target spk emb</center></p></td>
+                    <td><p><center>Target spk emb</center></p></td>
+                    <td><p><strong> Voice conversion </strong></p>  
+                      <audio id="player" controls><source src="audio/control/VC.wav" type="audio/wav"></audio>
+                    </td><td></td>
+                  </tr>
+                  <tr>
+                    <td><p><center>Target spk emb</center></p></td>
+                    <td><p><center>Source spk emb</center></p></td>
+                    <td><p><strong> Timbre control </strong></p>  
+                      <audio id="player" controls><source src="audio/control/TC.wav" type="audio/wav"></audio>
+                    </td><td></td>
+                  </tr>
+                  <tr>
+                    <td><p><center>Source spk emb</center></p></td>
+                    <td><p><center>Target spk emb</center></p></td>
+                    <td><p><strong> Pitch control </strong></p>  
+                      <audio id="player" controls><source src="audio/control/PC.wav" type="audio/wav"></audio>
+                    </td><td></td>
+                  </tr> 
+                </tbody>
+                </table>
+              </div>           
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 ml-auto">
+                  <table class="table table-responsive align-content-center" style="background-color: rgba(255, 255, 255, 0.993); border-radius: 20px">
+                    <thead><tr>
+                      <th style="width: 33%">Source Speaker</th>
+                      <th style="width: 33%">Target Speaker</th>
+                      <th style="width: 33%; color: rgb(7, 128, 67)">Pitch Control in VC scenario</th>
+                      <th style="width: 1%"></th>
+                    </tr></thead>
+                      
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" style="vertical-align: top;"><p> p225_007 </p>
+                        <audio id="player" controls ><source src="audio/control/p225_007.wav" type="audio/wav"></audio>
+                      </td>
+                      <td rowspan="3" style="vertical-align: top;"><p> p226_007 </p>
+                        <audio id="player" controls><source src="audio/control/p226_007.wav" type="audio/wav"></audio>
+                      </td>
+                      <td><p><strong> Converted sample #1 </strong></p>
+                        <audio id="player" controls><source src="audio/control/vc_src.wav" type="audio/wav"></audio>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><p><strong> Converted sample #2 </strong></p>
+                        <audio id="player" controls><source src="audio/control/vc_tar.wav" type="audio/wav"></audio>
+                      </td><td></td>
+                    </tr>
+                    <tr>
+                      <td><p><strong> Converted sample #3 </strong></p>
+                        <audio id="player" controls><source src="audio/control/vc_tar_14.wav" type="audio/wav"></audio>
+                      </td><td></td>
+                    </tr>
+                  </tbody>
+                  </table>
+              </div>           
+            </div>
+          </div>
+        </section>
 
         <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
         <!-- Bootstrap core JS-->
